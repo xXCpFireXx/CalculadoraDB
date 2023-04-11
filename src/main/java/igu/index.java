@@ -26,21 +26,137 @@ public class index extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1_txt1 = new javax.swing.JLabel();
+        jLabel1_txt2 = new javax.swing.JLabel();
+        btn_pesoIdeal = new javax.swing.JButton();
+        btn_calorias = new javax.swing.JButton();
+        btn_grasaCorporal = new javax.swing.JButton();
+        btn_indiceMetabolico = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1_txt1.setFont(new java.awt.Font("Tw Cen MT", 1, 48)); // NOI18N
+        jLabel1_txt1.setText("CÁLCULO");
+
+        jLabel1_txt2.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        jLabel1_txt2.setText("DE MAGNITUDES BIOMÉTRICAS");
+
+        btn_pesoIdeal.setBackground(new java.awt.Color(255, 146, 0));
+        btn_pesoIdeal.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        btn_pesoIdeal.setForeground(new java.awt.Color(255, 255, 255));
+        btn_pesoIdeal.setText("PESO IDEAL");
+        btn_pesoIdeal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_pesoIdealActionPerformed(evt);
+            }
+        });
+
+        btn_calorias.setBackground(new java.awt.Color(255, 146, 0));
+        btn_calorias.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        btn_calorias.setForeground(new java.awt.Color(255, 255, 255));
+        btn_calorias.setText("CALORIAS");
+        btn_calorias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_caloriasActionPerformed(evt);
+            }
+        });
+
+        btn_grasaCorporal.setBackground(new java.awt.Color(255, 146, 0));
+        btn_grasaCorporal.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        btn_grasaCorporal.setForeground(new java.awt.Color(255, 255, 255));
+        btn_grasaCorporal.setText("GRASA CORPORAL");
+        btn_grasaCorporal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_grasaCorporalActionPerformed(evt);
+            }
+        });
+
+        btn_indiceMetabolico.setBackground(new java.awt.Color(255, 146, 0));
+        btn_indiceMetabolico.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        btn_indiceMetabolico.setForeground(new java.awt.Color(255, 255, 255));
+        btn_indiceMetabolico.setText("ÍNDICE METABOLICO");
+        btn_indiceMetabolico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_indiceMetabolicoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1_txt2)
+                    .addComponent(jLabel1_txt1)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(btn_pesoIdeal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_calorias, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_grasaCorporal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_indiceMetabolico, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(147, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addComponent(jLabel1_txt1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1_txt2)
+                .addGap(18, 18, 18)
+                .addComponent(btn_pesoIdeal)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btn_calorias)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_grasaCorporal)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btn_indiceMetabolico)
+                .addContainerGap(54, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn_pesoIdealActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_pesoIdealActionPerformed
+        Peso_Ideal IBW = new Peso_Ideal();
+        IBW.setVisible(true);
+        IBW.setLocationRelativeTo(null);
+        this.dispose(); 
+    }//GEN-LAST:event_btn_pesoIdealActionPerformed
+
+    private void btn_grasaCorporalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_grasaCorporalActionPerformed
+        Porcentaje_Grasa_Corporal PGC = new Porcentaje_Grasa_Corporal();
+        PGC.setVisible(true);
+        PGC.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btn_grasaCorporalActionPerformed
+
+    private void btn_indiceMetabolicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_indiceMetabolicoActionPerformed
+        Indice_Metabolico_Basal TMB = new Indice_Metabolico_Basal();
+        TMB.setVisible(true);
+        TMB.setLocationRelativeTo(null);
+        this.dispose(); 
+    }//GEN-LAST:event_btn_indiceMetabolicoActionPerformed
+
+    private void btn_caloriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_caloriasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_caloriasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +194,12 @@ public class index extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btn_calorias;
+    private javax.swing.JButton btn_grasaCorporal;
+    private javax.swing.JButton btn_indiceMetabolico;
+    private javax.swing.JButton btn_pesoIdeal;
+    private javax.swing.JLabel jLabel1_txt1;
+    private javax.swing.JLabel jLabel1_txt2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
