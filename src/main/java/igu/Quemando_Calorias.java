@@ -14,14 +14,13 @@ import javax.swing.*;
  *
  * @author CAMI
  */
-public class Peso_Ideal extends javax.swing.JFrame {
+public class Quemando_Calorias extends javax.swing.JFrame {
 
-  
     String option;
     /**
      * Creates new form Peso_Ideal
      */
-    public Peso_Ideal() {
+    public Quemando_Calorias() {
         initComponents();
     }
    
@@ -34,44 +33,42 @@ public class Peso_Ideal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel_TextCM = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel_Genero = new javax.swing.JLabel();
+        jLabel_Actividad = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel_Titulo = new javax.swing.JLabel();
-        boxGenero = new javax.swing.JComboBox<>();
-        jLabel_Altura = new javax.swing.JLabel();
-        txtAltura = new javax.swing.JTextField();
+        boxActividad = new javax.swing.JComboBox<>();
+        jLabel_Tiempo = new javax.swing.JLabel();
+        txtTiempo = new javax.swing.JTextField();
         btnCalcular = new javax.swing.JButton();
+        txtPeso = new javax.swing.JTextField();
+        jLabel_Peso = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JButton();
-        jLabel_TextCM_pi = new javax.swing.JLabel();
-
-        jLabel_TextCM.setFont(new java.awt.Font("Tw Cen MT", 1, 20)); // NOI18N
-        jLabel_TextCM.setText("cm");
+        jLabel_TextKG = new javax.swing.JLabel();
+        jLabel_TextCM = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 251, 213));
 
-        jLabel_Genero.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel_Genero.setText("Género");
+        jLabel_Actividad.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel_Actividad.setText("Actividad");
 
         jPanel2.setBackground(new java.awt.Color(255, 146, 0));
-        jPanel2.setForeground(new java.awt.Color(255, 146, 0));
 
         jLabel_Titulo.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
         jLabel_Titulo.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Titulo.setText("PESO IDEAL (IBW)");
+        jLabel_Titulo.setText("PORCENTAJE DE GRASA CORPORAL");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(229, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(66, 66, 66)
                 .addComponent(jLabel_Titulo)
-                .addGap(206, 206, 206))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -81,19 +78,19 @@ public class Peso_Ideal extends javax.swing.JFrame {
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
-        boxGenero.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--- selecciona ---", "Hombre", "Mujer" }));
-        boxGenero.addActionListener(new java.awt.event.ActionListener() {
+        boxActividad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "--- Selecciona ---", "Caminar", "Tenis", "Montar en bicicleta", "Correr", "Nadar" }));
+        boxActividad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                boxGeneroActionPerformed(evt);
+                boxActividadActionPerformed(evt);
             }
         });
 
-        jLabel_Altura.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
-        jLabel_Altura.setText("Altura");
+        jLabel_Tiempo.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel_Tiempo.setText("Tiempo");
 
-        txtAltura.addActionListener(new java.awt.event.ActionListener() {
+        txtTiempo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAlturaActionPerformed(evt);
+                txtTiempoActionPerformed(evt);
             }
         });
 
@@ -107,6 +104,15 @@ public class Peso_Ideal extends javax.swing.JFrame {
             }
         });
 
+        txtPeso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPesoActionPerformed(evt);
+            }
+        });
+
+        jLabel_Peso.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
+        jLabel_Peso.setText("Peso");
+
         btnRegresar.setBackground(new java.awt.Color(255, 146, 0));
         btnRegresar.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
         btnRegresar.setForeground(new java.awt.Color(255, 255, 255));
@@ -117,54 +123,65 @@ public class Peso_Ideal extends javax.swing.JFrame {
             }
         });
 
-        jLabel_TextCM_pi.setFont(new java.awt.Font("Tw Cen MT", 1, 20)); // NOI18N
-        jLabel_TextCM_pi.setText("cm");
+        jLabel_TextKG.setFont(new java.awt.Font("Tw Cen MT", 1, 20)); // NOI18N
+        jLabel_TextKG.setText("kg");
+
+        jLabel_TextCM.setFont(new java.awt.Font("Tw Cen MT", 1, 20)); // NOI18N
+        jLabel_TextCM.setText("min");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(552, Short.MAX_VALUE)
-                .addComponent(btnRegresar)
-                .addGap(37, 37, 37))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(208, 208, 208)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel_Actividad)
+                    .addComponent(jLabel_Tiempo)
+                    .addComponent(jLabel_Peso))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnCalcular, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel_Genero)
-                            .addComponent(jLabel_Altura))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(txtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel_TextCM_pi))
-                            .addComponent(boxGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(185, Short.MAX_VALUE))
+                    .addComponent(txtTiempo, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                    .addComponent(boxActividad, 0, 175, Short.MAX_VALUE)
+                    .addComponent(txtPeso, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel_TextKG)
+                    .addComponent(jLabel_TextCM))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnRegresar)
+                .addGap(34, 34, 34))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(45, 45, 45)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
+                .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(boxGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_Genero))
+                    .addComponent(jLabel_Actividad)
+                    .addComponent(boxActividad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_Altura)
-                    .addComponent(jLabel_TextCM_pi))
-                .addGap(34, 34, 34)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtTiempo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel_Tiempo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel_Peso)
+                            .addComponent(jLabel_TextKG)))
+                    .addComponent(jLabel_TextCM))
+                .addGap(18, 18, 18)
                 .addComponent(btnCalcular)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRegresar)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -181,62 +198,49 @@ public class Peso_Ideal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtAlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAlturaActionPerformed
+    private void txtTiempoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTiempoActionPerformed
         Limpiar();
-    }//GEN-LAST:event_txtAlturaActionPerformed
+    }//GEN-LAST:event_txtTiempoActionPerformed
 
-    private void boxGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxGeneroActionPerformed
-        option = (String)boxGenero.getSelectedItem();
-    }//GEN-LAST:event_boxGeneroActionPerformed
+    private void boxActividadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxActividadActionPerformed
+        option = (String)boxActividad.getSelectedItem();
+    }//GEN-LAST:event_boxActividadActionPerformed
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
-        double Mujer = 53.1;
-        double Hombre = 56.2;
-        
-        //String altura = txtAltura.getText();
-        
-        //double altura1 = Double.parseDouble(altura);
-        
-        //double operacion1 = altura1-100;
-        //double operacion2 = operacion1 - ((operacion1 - 52)*0.4);
-        
-        //String resultado = String.valueOf(operacion2);
-        //jTextField_resultado.setText(resultado);
-        
-        //double operacion1 = altura1*1.36;
-        //double operacion2 = operacion1 / ((2.54 - 60)*Mujer);
-        
-        //String resultado = String.valueOf(operacion2);
-        //jTextField_resultado.setText(resultado);
-        
-        
-        //int txtAltura;
-        //double resultado;
-        
-        //txtAltura = Integer.parseInt(jTextField_resultado.getText());
-        
-        //if(option.equals("Hombre")){
-            //resultado = (Hombre + (1.41*(txtAltura))/2.54-60);
-            //jTextField_resultado.setText(""+resultado);
-        //}
-        
-        int txtAltura1;
+               
+        int txtTiempo1, txtPeso1;
         double resultado;
         try {
-            txtAltura1 = Integer.parseInt(txtAltura.getText());
-
-            if(option.equals("Hombre")){
-                resultado = Hombre + (1.41*((txtAltura1/2.54)-60));
-                DecimalFormat df = new DecimalFormat("#.##");
-                //jTextField_resultado.setText(df.format(resultado));
-                //jTextField_resultado.setText(df.format(resultado));
-                //JOptionPane.showMessageDialog(this, "SU PESO IDEAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.PLAIN_MESSAGE);
-                JOptionPane.showMessageDialog(this, "SU PESO IDEAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
-            } else if(option.equals("Mujer")){
-                resultado = Mujer + (1.36*((txtAltura1/2.54)-60));
-                DecimalFormat df = new DecimalFormat("#.##");
-                //jTextField_resultado.setText(df.format(resultado));
-                JOptionPane.showMessageDialog(this, "SU PESO IDEAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+            txtTiempo1 = Integer.parseInt(txtTiempo.getText());
+            double T = Double.valueOf(txtTiempo1);
+            txtPeso1 = Integer.parseInt(txtPeso.getText());
+            double P = Double.valueOf(txtPeso1);
+            
+            if(option.equals("Caminar")){
+                
+                resultado = ((T*2*P)/200);
+                JOptionPane.showMessageDialog(this, "Usted quemó "+resultado+" Calorias","RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+                
+            } else if(option.equals("Tenis")){
+                
+                resultado = ((T*5*P)/200);
+                JOptionPane.showMessageDialog(this, "Usted quemó "+resultado+" Calorias","RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+            
+            } else if(option.equals("Montar en bicicleta")){
+                
+                resultado = ((T*14*P)/200);
+                JOptionPane.showMessageDialog(this, "Usted quemó "+resultado+" Calorias","RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+            
+            } else if(option.equals("Correr")){
+                
+                resultado = ((T*6*P)/200);
+                JOptionPane.showMessageDialog(this, "Usted quemó "+resultado+" Calorias","RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+            
+            } else if(option.equals("Nadar")){
+                
+                resultado = ((T*9.8*P)/200);
+                JOptionPane.showMessageDialog(this, "Usted quemó "+resultado+" Calorias","RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+            
             } else 
                 JOptionPane.showMessageDialog(this, "Selecciona un género");
             
@@ -245,16 +249,20 @@ public class Peso_Ideal extends javax.swing.JFrame {
             if (e instanceof NumberFormatException) {
                 JOptionPane.showMessageDialog(this, "Ingrese solo números enteros","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
             }
-                JOptionPane.showMessageDialog(this, "Selecciona un género","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Selecciona una Actividad","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
                 return;
         }
     }//GEN-LAST:event_btnCalcularActionPerformed
+
+    private void txtPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPesoActionPerformed
+        Limpiar();
+    }//GEN-LAST:event_txtPesoActionPerformed
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         index I = new index();
         I.setVisible(true);
         I.setLocationRelativeTo(null);
-        this.dispose();        
+        this.dispose();
     }//GEN-LAST:event_btnRegresarActionPerformed
 
     /**
@@ -274,41 +282,50 @@ public class Peso_Ideal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Peso_Ideal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Quemando_Calorias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Peso_Ideal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Quemando_Calorias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Peso_Ideal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Quemando_Calorias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Peso_Ideal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Quemando_Calorias.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Peso_Ideal().setVisible(true);
+                new Quemando_Calorias().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> boxGenero;
+    private javax.swing.JComboBox<String> boxActividad;
     private javax.swing.JButton btnCalcular;
     private javax.swing.JButton btnRegresar;
-    private javax.swing.JLabel jLabel_Altura;
-    private javax.swing.JLabel jLabel_Genero;
+    private javax.swing.JLabel jLabel_Actividad;
+    private javax.swing.JLabel jLabel_Peso;
     private javax.swing.JLabel jLabel_TextCM;
-    private javax.swing.JLabel jLabel_TextCM_pi;
+    private javax.swing.JLabel jLabel_TextKG;
+    private javax.swing.JLabel jLabel_Tiempo;
     private javax.swing.JLabel jLabel_Titulo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField txtAltura;
+    private javax.swing.JTextField txtPeso;
+    private javax.swing.JTextField txtTiempo;
     // End of variables declaration//GEN-END:variables
 
     private void Limpiar() {
-        boxGenero.setSelectedItem("Selecciona una opción");
-        txtAltura.setText("");
+        boxActividad.setSelectedItem("Selecciona una opción");
+        txtTiempo.setText("");
     }
 
  

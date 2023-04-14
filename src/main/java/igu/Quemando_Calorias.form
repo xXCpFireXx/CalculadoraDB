@@ -47,38 +47,28 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="208" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="btnCalcular" min="-2" pref="307" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="btnRegresar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel_Genero" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_Altura" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_Peso" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel_Edad" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtAltura" alignment="0" min="-2" pref="175" max="-2" attributes="0"/>
-                                      <Component id="txtPeso" min="-2" pref="175" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel_TextKG" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel_TextCM" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <Component id="boxGenero" min="-2" pref="175" max="-2" attributes="0"/>
-                              <Component id="txtEdad" min="-2" pref="175" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="jLabel_Actividad" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Tiempo" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_Peso" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="btnCalcular" max="32767" attributes="0"/>
+                      <Component id="txtTiempo" pref="175" max="32767" attributes="0"/>
+                      <Component id="boxActividad" pref="175" max="32767" attributes="0"/>
+                      <Component id="txtPeso" pref="175" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel_TextKG" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel_TextCM" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btnRegresar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -89,43 +79,41 @@
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel_Genero" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="boxGenero" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                      <Component id="jLabel_Actividad" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="boxActividad" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtAltura" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jLabel_Altura" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_TextCM" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtPeso" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jLabel_Peso" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel_TextKG" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtEdad" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="jLabel_Edad" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtTiempo" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jLabel_Tiempo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="txtPeso" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                              <Component id="jLabel_Peso" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel_TextKG" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Component id="jLabel_TextCM" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="btnCalcular" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btnRegresar" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                  <Component id="btnCalcular" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="btnRegresar" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="22" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel_Genero">
+        <Component class="javax.swing.JLabel" name="jLabel_Actividad">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tw Cen MT" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="G&#xe9;nero"/>
+            <Property name="text" type="java.lang.String" value="Actividad"/>
           </Properties>
         </Component>
         <Container class="javax.swing.JPanel" name="jPanel2">
@@ -139,9 +127,9 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
                       <Component id="jLabel_Titulo" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="138" max="32767" attributes="0"/>
+                      <EmptySpace pref="74" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -165,39 +153,42 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="&#xcd;NDICE METAB&#xd3;LICO BASAL"/>
+                <Property name="text" type="java.lang.String" value="PORCENTAJE DE GRASA CORPORAL"/>
               </Properties>
             </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JComboBox" name="boxGenero">
+        <Component class="javax.swing.JComboBox" name="boxActividad">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
-                <StringItem index="0" value="--- selecciona ---"/>
-                <StringItem index="1" value="Hombre"/>
-                <StringItem index="2" value="Mujer"/>
+              <StringArray count="6">
+                <StringItem index="0" value="--- Selecciona ---"/>
+                <StringItem index="1" value="Caminar"/>
+                <StringItem index="2" value="Tenis"/>
+                <StringItem index="3" value="Montar en bicicleta"/>
+                <StringItem index="4" value="Correr"/>
+                <StringItem index="5" value="Nadar"/>
               </StringArray>
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="boxGeneroActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="boxActividadActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel_Altura">
+        <Component class="javax.swing.JLabel" name="jLabel_Tiempo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tw Cen MT" size="24" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Altura"/>
+            <Property name="text" type="java.lang.String" value="Tiempo"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtAltura">
+        <Component class="javax.swing.JTextField" name="txtTiempo">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAlturaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtTiempoActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCalcular">
@@ -230,26 +221,13 @@
             <Property name="text" type="java.lang.String" value="Peso"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel_Edad">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tw Cen MT" size="24" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Edad"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtEdad">
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEdadActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JButton" name="btnRegresar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="92" red="ff" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tw Cen MT" size="14" style="1"/>
+              <Font name="Tw Cen MT" size="18" style="1"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -260,20 +238,20 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnRegresarActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel_TextCM">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Tw Cen MT" size="20" style="1"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="cm"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel_TextKG">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tw Cen MT" size="20" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="kg"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel_TextCM">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tw Cen MT" size="20" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="min"/>
           </Properties>
         </Component>
       </SubComponents>

@@ -46,19 +46,22 @@ public class Indice_Metabolico_Basal extends javax.swing.JFrame {
         jLabel_Edad = new javax.swing.JLabel();
         txtEdad = new javax.swing.JTextField();
         btnRegresar = new javax.swing.JButton();
+        jLabel_TextCM = new javax.swing.JLabel();
+        jLabel_TextKG = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 251, 213));
 
         jLabel_Genero.setFont(new java.awt.Font("Tw Cen MT", 1, 24)); // NOI18N
         jLabel_Genero.setText("Género");
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 146, 0));
 
         jLabel_Titulo.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        jLabel_Titulo.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Titulo.setText("ÌNDICE METABÓLICO BASAL");
+        jLabel_Titulo.setText("ÍNDICE METABÓLICO BASAL");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -93,6 +96,9 @@ public class Indice_Metabolico_Basal extends javax.swing.JFrame {
             }
         });
 
+        btnCalcular.setBackground(new java.awt.Color(255, 146, 0));
+        btnCalcular.setFont(new java.awt.Font("Tw Cen MT", 1, 18)); // NOI18N
+        btnCalcular.setForeground(new java.awt.Color(255, 255, 255));
         btnCalcular.setText("CALCULAR");
         btnCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,12 +124,21 @@ public class Indice_Metabolico_Basal extends javax.swing.JFrame {
             }
         });
 
+        btnRegresar.setBackground(new java.awt.Color(255, 146, 0));
+        btnRegresar.setFont(new java.awt.Font("Tw Cen MT", 1, 14)); // NOI18N
+        btnRegresar.setForeground(new java.awt.Color(255, 255, 255));
         btnRegresar.setText("REGRESAR");
         btnRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegresarActionPerformed(evt);
             }
         });
+
+        jLabel_TextCM.setFont(new java.awt.Font("Tw Cen MT", 1, 20)); // NOI18N
+        jLabel_TextCM.setText("cm");
+
+        jLabel_TextKG.setFont(new java.awt.Font("Tw Cen MT", 1, 20)); // NOI18N
+        jLabel_TextKG.setText("kg");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -132,28 +147,31 @@ public class Indice_Metabolico_Basal extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(208, 208, 208)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel_Edad)
-                        .addGap(73, 73, 73)
-                        .addComponent(txtEdad))
+                        .addComponent(btnCalcular, javax.swing.GroupLayout.PREFERRED_SIZE, 307, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnRegresar)
+                        .addGap(32, 32, 32))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel_Genero)
                             .addComponent(jLabel_Altura)
-                            .addComponent(jLabel_Peso))
-                        .addGap(49, 49, 49)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(boxGenero, 0, 175, Short.MAX_VALUE)
-                            .addComponent(txtAltura)
-                            .addComponent(txtPeso))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(298, 298, 298)
-                .addComponent(btnCalcular)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnRegresar)
-                .addGap(32, 32, 32))
+                            .addComponent(jLabel_Peso)
+                            .addComponent(jLabel_Edad))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel_TextKG)
+                                    .addComponent(jLabel_TextCM)))
+                            .addComponent(boxGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -167,11 +185,13 @@ public class Indice_Metabolico_Basal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtAltura, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_Altura))
+                    .addComponent(jLabel_Altura)
+                    .addComponent(jLabel_TextCM))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel_Peso))
+                    .addComponent(jLabel_Peso)
+                    .addComponent(jLabel_TextKG))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEdad, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -180,7 +200,7 @@ public class Indice_Metabolico_Basal extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCalcular)
                     .addComponent(btnRegresar))
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -225,13 +245,6 @@ public class Indice_Metabolico_Basal extends javax.swing.JFrame {
 
             if(option.equals("Hombre")){
                 resultado = ((HombreP*(txtPeso1))+(HombreE*(txtAltura1))-(HombreA*(txtEdad1))+Hombre);
-                
-                //-----------------------------------------------------
-                //SEGUN EL PROFE
-                //resultado = (HombreP*(txtPeso1))+(HombreE*(txtEdad1));
-                //resultado1 = resultado+(HombreA*(txtAltura1)+88.362);
-                //resultado1 = -(HombreA*(txtAltura1));
-                //resultado2 = resultado - resultado1 + Hombre;
 
                 DecimalFormat df = new DecimalFormat("#.###");
                 JOptionPane.showMessageDialog(this, "SU TASA METABÓLICA BASAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
@@ -239,7 +252,7 @@ public class Indice_Metabolico_Basal extends javax.swing.JFrame {
             } else if(option.equals("Mujer")){
                 resultado = ((MujerP*(txtPeso1))+(MujerE*(txtAltura1))-(MujerA*(txtEdad1))+Mujer);
                 DecimalFormat df = new DecimalFormat("#.###");
-                JOptionPane.showMessageDialog(this, "SU PESO IDEAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "SU TASA METABÓLICA BASAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
             } else 
                 JOptionPane.showMessageDialog(this, "Selecciona un género");
             
@@ -262,9 +275,9 @@ public class Indice_Metabolico_Basal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtEdadActionPerformed
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
-        Peso_Ideal IBW = new Peso_Ideal();
-        IBW.setVisible(true);  
-        IBW.setLocationRelativeTo(null);
+        index I = new index();
+        I.setVisible(true);  
+        I.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnRegresarActionPerformed
 
@@ -312,6 +325,8 @@ public class Indice_Metabolico_Basal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_Edad;
     private javax.swing.JLabel jLabel_Genero;
     private javax.swing.JLabel jLabel_Peso;
+    private javax.swing.JLabel jLabel_TextCM;
+    private javax.swing.JLabel jLabel_TextKG;
     private javax.swing.JLabel jLabel_Titulo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
