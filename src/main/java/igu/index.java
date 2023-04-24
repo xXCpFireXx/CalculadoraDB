@@ -151,6 +151,7 @@ public class index extends javax.swing.JFrame {
         Porcentaje_Grasa_Corporal PGC = new Porcentaje_Grasa_Corporal();
         PGC.setVisible(true);
         PGC.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btn_grasaCorporalActionPerformed
 
     private void btn_indiceMetabolicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_indiceMetabolicoActionPerformed
@@ -161,7 +162,10 @@ public class index extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_indiceMetabolicoActionPerformed
 
     private void btn_caloriasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_caloriasActionPerformed
-        // TODO add your handling code here:
+        Quemando_Calorias QC = new Quemando_Calorias();
+        QC.setVisible(true);
+        QC.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_btn_caloriasActionPerformed
 
     /**
