@@ -3,14 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package igu;
+
 /**
  *
  * @author Camila y Cristian
  */
 public class index extends javax.swing.JFrame {
     
-    public index() {        
-        initComponents();        
+    public index() {
+        
+        initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -198,17 +201,4 @@ public class index extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelFondo;
     // End of variables declaration//GEN-END:variables
 
-   /* class CalculadoraDatosBiometricos extends JPanel{
-        
-        private Image imagen;
-        
-        public void paint (Graphics g){
-            
-            imagen=new ImageIcon(getClass().getResource("Fondo.jpeg")).getImage();
-            g.drawImage(imagen, 0,0, getWidth(), getHeight(), this);
-            setOpaque(false);
-            super.paint(g);
-        }
-        
-    }*/
 }
