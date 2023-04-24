@@ -3,29 +3,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package igu;
-
-import image.JPanelImage;
-import java.awt.Graphics;
-import java.awt.Image;
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 /**
  *
- * @author crisu
+ * @author Camila y Cristian
  */
 public class index extends javax.swing.JFrame {
-
     
-   // CalculadoraDatosBiometricos icono = new CalculadoraDatosBiometricos();
-    
-    public index() {
-        //this.setContentPane(icono);
-        
-        initComponents();
-        /*JPanelImage mImagen = new JPanelImage(jPanelFondo, "/image/Fondo.jpg");
-        jPanelFondo.add(mImagen).repaint();*/
-        //setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+    public index() {        
+        initComponents();        
     }
 
     /**
