@@ -192,8 +192,10 @@ public class Peso_Ideal extends javax.swing.JFrame {
             
             //Ciclo if donde se realiza los calculos de la persona
             if(option.equals("Hombre")){ //Cálculo hombre
+                
                 resultado = Hombre + (1.41*((txtAltura1/2.54)-60)); //realiza la operaciòn con el dato de la persona y con la variable pre-establecida "Hombre"
                 DecimalFormat df = new DecimalFormat("#.##"); //Código para solicitar al programa que solo utilice 2 decimales                
+                
                 //Arroja el resultado de la persona en una interfaz diferente
                 JOptionPane.showMessageDialog(this, "SU PESO IDEAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
                 
@@ -201,8 +203,10 @@ public class Peso_Ideal extends javax.swing.JFrame {
                 
                 resultado = Mujer + (1.36*((txtAltura1/2.54)-60)); //realiza la operaciòn con el dato de la persona y con la variable pre-establecida "Mujer"
                 DecimalFormat df = new DecimalFormat("#.##"); //Código para solicitar al programa que solo utilice 2 decimales                              
+                
                 //Arroja el resultado de la persona en una interfaz diferente              
                 JOptionPane.showMessageDialog(this, "SU PESO IDEAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+            
             //condicional para que cuando la persona no seleccione un género le aparecera un mensaje diciendo que "seleccione su género"
             } else 
                 JOptionPane.showMessageDialog(this, "Selecciona un género");

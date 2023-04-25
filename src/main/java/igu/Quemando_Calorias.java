@@ -12,9 +12,10 @@ import javax.swing.*;
  */
 public class Quemando_Calorias extends javax.swing.JFrame {
 
-    String option;
+    String option;//Variable para guardar la opción escogida en el Box de Género
+    
     public Quemando_Calorias() {
-        initComponents();
+        initComponents();//Método para inicializar los componentes de la vista
     }
    
     /**
@@ -52,16 +53,13 @@ public class Quemando_Calorias extends javax.swing.JFrame {
         jLabel_Titulo.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
         jLabel_Titulo.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Titulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_Titulo.setText("PORCENTAJE DE GRASA CORPORAL");
+        jLabel_Titulo.setText("CALORIAS QUEMADAS");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(66, 66, 66)
-                .addComponent(jLabel_Titulo)
-                .addContainerGap(74, Short.MAX_VALUE))
+            .addComponent(jLabel_Titulo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,7 +141,7 @@ public class Quemando_Calorias extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel_TextKG)
                     .addComponent(jLabel_TextCM))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(155, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnRegresar)
@@ -196,7 +194,7 @@ public class Quemando_Calorias extends javax.swing.JFrame {
     }//GEN-LAST:event_txtTiempoActionPerformed
 
     private void boxActividadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxActividadActionPerformed
-        option = (String)boxActividad.getSelectedItem();
+        option = (String)boxActividad.getSelectedItem();//Se le asina items al comboBox 
     }//GEN-LAST:event_boxActividadActionPerformed
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
@@ -209,9 +207,10 @@ public class Quemando_Calorias extends javax.swing.JFrame {
             txtPeso1 = Integer.parseInt(txtPeso.getText());
             double P = Double.valueOf(txtPeso1);
             
+            //Ciclo if donde se realiza los calculos de la persona según la actividad seleccionada
             if(option.equals("Caminar")){
                 
-                resultado = ((T*2*P)/200);
+                resultado = ((T*2*P)/200);//realiza la operaciòn con las variables de Tiempo, Peso y valor de la actividad seleccionada
                 JOptionPane.showMessageDialog(this, "Usted quemó "+resultado+" Calorias","RESULTADO",JOptionPane.INFORMATION_MESSAGE);
                 
             } else if(option.equals("Tenis")){
@@ -240,7 +239,7 @@ public class Quemando_Calorias extends javax.swing.JFrame {
         } catch (NumberFormatException | NullPointerException e) {
             
             if (e instanceof NumberFormatException) {
-                JOptionPane.showMessageDialog(this, "Ingrese solo números enteros","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Ingrese solo números enteros","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);//Mensaje para cuando la persona digite numeros decimales le salga "solo números enteros"
             }
                 JOptionPane.showMessageDialog(this, "Selecciona una Actividad","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
                 return;

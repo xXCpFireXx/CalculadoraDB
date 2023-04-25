@@ -6,22 +6,19 @@ package igu;
 
 import java.text.DecimalFormat;
 import javax.swing.*;
-//import javax.swing.ImageIcon;
-//import javax.swing.JOptionPane;
-//import javax.swing.JPanel;
 
 /**
  *
- * @author CAMI
+ * @author Cristian Penagos
  */
 public class Porcentaje_Grasa_Corporal extends javax.swing.JFrame {
 
-    String option;
+    String option; //Variable para guardar la opción escogida en el Box de Género
     /**
      * Creates new form Peso_Ideal
      */
     public Porcentaje_Grasa_Corporal() {
-        initComponents();
+        initComponents();//Método para inicializar los componentes de la vista
     }
    
     /**
@@ -215,43 +212,45 @@ public class Porcentaje_Grasa_Corporal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtAlturaActionPerformed
 
     private void boxGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxGeneroActionPerformed
-        option = (String)boxGenero.getSelectedItem();
+        option = (String)boxGenero.getSelectedItem();//Se le asina items al comboBox 
     }//GEN-LAST:event_boxGeneroActionPerformed
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        //Se crea las variables y se tiene su nùmero predeterminado para màs adelante hacer la operaciòn
         double Mujer = 5.4;        
         double Hombre = 16.2;
         
-        
+        //Variables para ingresar datos de la persona
         int txtAltura1, txtPeso1, txtEdad1, mul;
         double resultado, imc;
         try {
-            txtAltura1 = Integer.parseInt(txtAltura.getText());
-            txtPeso1 = Integer.parseInt(txtPeso.getText());
-            txtEdad1 = Integer.parseInt(txtEdad.getText());
+            txtAltura1 = Integer.parseInt(txtAltura.getText());//Convierte el txtAltura en número entero
+            txtPeso1 = Integer.parseInt(txtPeso.getText());//Convierte el txtPeso en número entero
+            txtEdad1 = Integer.parseInt(txtEdad.getText());//Convierte el txtEdad en número entero
             
-            double dmul = Double.valueOf(txtAltura1*txtAltura1);
-            imc = (txtPeso1/dmul)*10000;   
+            double dmul = Double.valueOf(txtAltura1*txtAltura1);//Convierte el txtAltura en double
+            imc = (txtPeso1/dmul)*10000;   //Operación del IMC
             
-            if(option.equals("Hombre")){
+            //Ciclo if donde se realiza los calculos de la persona
+            if(option.equals("Hombre")){//Cálculo hombre
                 
-                resultado = ((1.20*(imc))+(0.23*(txtEdad1))-Hombre);
+                resultado = ((1.20*(imc))+(0.23*(txtEdad1))-Hombre);//realiza la operaciòn con los datos de la persona y con la variable pre-establecida "Hombre"
 
-                DecimalFormat df = new DecimalFormat("#.##");
-                JOptionPane.showMessageDialog(this, "SU PORCENTAJE DE GRASA CORPORAL ES: "+df.format(resultado)+"%","RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+                DecimalFormat df = new DecimalFormat("#.##");//Código para solicitar al programa que solo utilice 2 decimales
+                JOptionPane.showMessageDialog(this, "SU PORCENTAJE DE GRASA CORPORAL ES: "+df.format(resultado)+"%","RESULTADO",JOptionPane.INFORMATION_MESSAGE);//Arroja el resultado de la persona en una interfaz diferente
                 
-            } else if(option.equals("Mujer")){
-                resultado = ((1.20*(imc))+(0.23*(txtEdad1))-Mujer);
+            } else if(option.equals("Mujer")){//Cálculo Mujer
+                resultado = ((1.20*(imc))+(0.23*(txtEdad1))-Mujer);//realiza la operaciòn con los datos de la persona y con la variable pre-establecida "Mujer"
                 
-                DecimalFormat df = new DecimalFormat("#.##");
-                JOptionPane.showMessageDialog(this, "SU PORCENTAJE DE GRASA CORPORAL ES: "+df.format(resultado)+"%","RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+                DecimalFormat df = new DecimalFormat("#.##");//Código para solicitar al programa que solo utilice 2 decimales
+                JOptionPane.showMessageDialog(this, "SU PORCENTAJE DE GRASA CORPORAL ES: "+df.format(resultado)+"%","RESULTADO",JOptionPane.INFORMATION_MESSAGE);//Arroja el resultado de la persona en una interfaz diferente
             } else 
-                JOptionPane.showMessageDialog(this, "Selecciona un género");
+                JOptionPane.showMessageDialog(this, "Selecciona un género");//Mensaje para que cuando la persona no seleccione un género le aparecera diciendo que "seleccione su género"
             
         } catch (NumberFormatException | NullPointerException e) {
             
             if (e instanceof NumberFormatException) {
-                JOptionPane.showMessageDialog(this, "Ingrese solo números enteros","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Ingrese solo números enteros","ADVERTENCIA",JOptionPane.WARNING_MESSAGE); //Mensaje para cuando la persona digite numeros decimales le salga "solo números enteros"
             }
                 JOptionPane.showMessageDialog(this, "Selecciona un género","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
                 return;
@@ -328,7 +327,8 @@ public class Porcentaje_Grasa_Corporal extends javax.swing.JFrame {
     private javax.swing.JTextField txtEdad;
     private javax.swing.JTextField txtPeso;
     // End of variables declaration//GEN-END:variables
-
+    
+    //Método para limpiar los cuadros (no aparezca texto)
     private void Limpiar() {
         boxGenero.setSelectedItem("Selecciona una opción");
         txtAltura.setText("");
