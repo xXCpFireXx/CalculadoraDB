@@ -4,22 +4,15 @@
  */
 package igu;
 
-import java.text.DecimalFormat;
 import javax.swing.*;
-//import javax.swing.ImageIcon;
-//import javax.swing.JOptionPane;
-//import javax.swing.JPanel;
 
 /**
  *
- * @author CAMI
+ * @author Cristian Penagos
  */
 public class Quemando_Calorias extends javax.swing.JFrame {
 
     String option;
-    /**
-     * Creates new form Peso_Ideal
-     */
     public Quemando_Calorias() {
         initComponents();
     }
