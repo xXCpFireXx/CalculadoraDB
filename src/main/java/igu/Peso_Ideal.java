@@ -175,7 +175,7 @@ public class Peso_Ideal extends javax.swing.JFrame {
     }//GEN-LAST:event_txtAlturaActionPerformed
 
     private void boxGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxGeneroActionPerformed
-        option = (String)boxGenero.getSelectedItem();
+        option = (String)boxGenero.getSelectedItem(); //Se le asina items al comboBox 
     }//GEN-LAST:event_boxGeneroActionPerformed
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
@@ -273,6 +273,7 @@ public class Peso_Ideal extends javax.swing.JFrame {
     private javax.swing.JTextField txtAltura;
     // End of variables declaration//GEN-END:variables
 
+    //Método para limpiar los cuadros (no aparezca texto)
     private void Limpiar() {
         boxGenero.setSelectedItem("Selecciona una opción");
         txtAltura.setText("");
