@@ -6,9 +6,6 @@ package igu;
 
 import java.text.DecimalFormat;
 import javax.swing.*;
-//import javax.swing.ImageIcon;
-//import javax.swing.JOptionPane;
-//import javax.swing.JPanel;
 
 /**
  *
@@ -226,6 +223,7 @@ public class Indice_Metabolico_Basal extends javax.swing.JFrame {
     }//GEN-LAST:event_boxGeneroActionPerformed
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        //Se crea las variables y se tiene su nùmero predeterminado para màs adelante hacer la operaciòn
         double Mujer = 447.593;
         double MujerP = 9.247;
         double MujerA = 4.330;
@@ -236,28 +234,32 @@ public class Indice_Metabolico_Basal extends javax.swing.JFrame {
         double HombreA = 5.677;
         double HombreE = 4.799;
         
+        //Variable donde la persona digita su altura, peso y edad
         int txtAltura1, txtPeso1, txtEdad1;
         double resultado;
         try {
+            //Convierte el txtAltura, txtPeso y txtEdad en números enteros
             txtAltura1 = Integer.parseInt(txtAltura.getText());
             txtPeso1 = Integer.parseInt(txtPeso.getText());
             txtEdad1 = Integer.parseInt(txtEdad.getText());
-
-            if(option.equals("Hombre")){
-                resultado = ((HombreP*(txtPeso1))+(HombreE*(txtAltura1))-(HombreA*(txtEdad1))+Hombre);
-
-                DecimalFormat df = new DecimalFormat("#.###");
+            //Ciclo if donde se realiza los calculos de la persona
+            if(option.equals("Hombre")){ //Cálculo hombre
+                resultado = ((HombreP*(txtPeso1))+(HombreE*(txtAltura1))-(HombreA*(txtEdad1))+Hombre); //realiza la operación con los datos que digitó la persona y con las variables pre-establecidas donde dice"Hombre"
+                DecimalFormat df = new DecimalFormat("#.###"); //Código para solicitar al programa que solo utilice 3 decimales    
+                //Arroja el resultado de la persona en una interfaz diferente   
                 JOptionPane.showMessageDialog(this, "SU TASA METABÓLICA BASAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
                 
-            } else if(option.equals("Mujer")){
-                resultado = ((MujerP*(txtPeso1))+(MujerE*(txtAltura1))-(MujerA*(txtEdad1))+Mujer);
-                DecimalFormat df = new DecimalFormat("#.###");
+            } else if(option.equals("Mujer")){ //Cálculo mujer
+                resultado = ((MujerP*(txtPeso1))+(MujerE*(txtAltura1))-(MujerA*(txtEdad1))+Mujer); //realiza la operación con los datos que digitó la persona y con las variables pre-establecidas donde dice"Mujer"
+                DecimalFormat df = new DecimalFormat("#.###"); //Código para solicitar al programa que solo utilice 3 decimales       
+                //Arroja el resultado de la persona en una interfaz diferente   
                 JOptionPane.showMessageDialog(this, "SU TASA METABÓLICA BASAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+            //condicional para que cuando la persona no seleccione un género le aparecera un mensaje diciendo que "seleccione su género"
             } else 
                 JOptionPane.showMessageDialog(this, "Selecciona un género");
             
         } catch (NumberFormatException | NullPointerException e) {
-            
+            //Condicional para cuando la persona digite numeros decimales le salga un mensaje diciendo "solo números enteros"
             if (e instanceof NumberFormatException) {
                 JOptionPane.showMessageDialog(this, "Ingrese solo números enteros","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
             }

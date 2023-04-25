@@ -179,33 +179,36 @@ public class Peso_Ideal extends javax.swing.JFrame {
     }//GEN-LAST:event_boxGeneroActionPerformed
 
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
+        //Se crea las variables y se tiene su nùmero predeterminado para màs adelante hacer la operaciòn
         double Mujer = 53.1;
         double Hombre = 56.2;
         
+        //Variable donde la persona digita su altura
         int txtAltura1;
         double resultado;
         
         try {
-            txtAltura1 = Integer.parseInt(txtAltura.getText());
-
-            if(option.equals("Hombre")){
-                resultado = Hombre + (1.41*((txtAltura1/2.54)-60));
-                DecimalFormat df = new DecimalFormat("#.##");                
-                
-                JOptionPane.showMessageDialog(this, "SU PESO IDEAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
-                
-            } else if(option.equals("Mujer")){
-                
-                resultado = Mujer + (1.36*((txtAltura1/2.54)-60));
-                DecimalFormat df = new DecimalFormat("#.##");                             
-                               
-                JOptionPane.showMessageDialog(this, "SU PESO IDEAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+            txtAltura1 = Integer.parseInt(txtAltura.getText()); //Convierte el txtAltura en número entero
             
+            //Ciclo if donde se realiza los calculos de la persona
+            if(option.equals("Hombre")){ //Cálculo hombre
+                resultado = Hombre + (1.41*((txtAltura1/2.54)-60)); //realiza la operaciòn con el dato de la persona y con la variable pre-establecida "Hombre"
+                DecimalFormat df = new DecimalFormat("#.##"); //Código para solicitar al programa que solo utilice 2 decimales                
+                //Arroja el resultado de la persona en una interfaz diferente
+                JOptionPane.showMessageDialog(this, "SU PESO IDEAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+                
+            } else if(option.equals("Mujer")){ //Cálculo mujer
+                
+                resultado = Mujer + (1.36*((txtAltura1/2.54)-60)); //realiza la operaciòn con el dato de la persona y con la variable pre-establecida "Mujer"
+                DecimalFormat df = new DecimalFormat("#.##"); //Código para solicitar al programa que solo utilice 2 decimales                              
+                //Arroja el resultado de la persona en una interfaz diferente              
+                JOptionPane.showMessageDialog(this, "SU PESO IDEAL ES: "+df.format(resultado),"RESULTADO",JOptionPane.INFORMATION_MESSAGE);
+            //condicional para que cuando la persona no seleccione un género le aparecera un mensaje diciendo que "seleccione su género"
             } else 
                 JOptionPane.showMessageDialog(this, "Selecciona un género");
             
         } catch (NumberFormatException | NullPointerException e) {
-            
+            //Condicional para cuando la persona digite numeros decimales le salga un mensaje diciendo "solo números enteros"
             if (e instanceof NumberFormatException) {
                 JOptionPane.showMessageDialog(this, "Ingrese solo números enteros","ADVERTENCIA",JOptionPane.WARNING_MESSAGE);
             }
